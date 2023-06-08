@@ -1,10 +1,11 @@
+#importing tkinter 
 from tkinter import *
 
 root=Tk()
-
+#using Entery widget
 input=Entry(root,width=50)
 input.grid(row=0,column=0,columnspan=3,padx=15,pady=15)
-
+#declaring function for buttons
 def click(num):
     current_n=input.get()
     input.delete(0,END)
@@ -25,7 +26,7 @@ def equal():
     input.delete(0,END)
     input.insert(0,int(fnum+sec_n))
     return
-
+#creating button widgets
 Button_1=Button(root,text='1',bg='antique white',padx=50,pady=25,command=lambda:click(1))
 Button_2=Button(root,text='2',bg='antique white',padx=50,pady=25,command=lambda:click(2))
 Button_3=Button(root,text='3',bg='antique white',padx=50,pady=25,command=lambda:click(3))
@@ -39,7 +40,7 @@ Button_0=Button(root,text='0',bg='antique white',padx=50,pady=25,command=lambda:
 add=Button(root,text='+',bg='antique white',padx=105,pady=25,command=addi)
 dele=Button(root,text='AC',bg='antique white',padx=45,pady=25,command=clear)
 equ=Button(root,text='=',bg='pale green',padx=105,pady=25,command=equal)
-
+#assigning the Button widgets
 Button_7.grid(row=2,column=0)
 Button_8.grid(row=2,column=1)
 Button_9.grid(row=2,column=2)
@@ -58,5 +59,5 @@ add.grid(row=5,column=1,columnspan=2)
 dele.grid(row=6,column=0)
 equ.grid(row=6,column=1,columnspan=2)
 
-
+#calling mainloop
 root.mainloop()
